@@ -1,0 +1,32 @@
+include mixins/_loginForm
+include mixins/_accountMenu
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel='stylesheet' href='/style.css')
+		title Twitter Clone1
+	body 
+		.header
+			.wrapper
+				#logo
+					h1.site_title
+						a(href='/') twitter clone
+				#navigation
+					if user 
+						//- span hello #{user.username} 
+						//- a(href='/account') Account
+						//- a(href='/logout') logout
+						+accountMenu()
+					else 
+						+loginForm()
+		.content_area
+				block content
+		.footer
+			p
+				small 2018 TwitterClone Inc. V. 1.0 
+					a(href='https://shubhankardubey.github.io/dubeyshubhankar/index.html' target='_blank') Shubhankar Dubey
+			
+		
