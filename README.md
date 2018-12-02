@@ -2,9 +2,9 @@
 
 # To test it out
 
-Run npm install in the root folder.
+Run `npm install` in the root folder.
 
-Create a `variables.env` file in the root and enter these credentials
+Create a `variables.env` file in the root (if already made please ignore) and enter these credentials
 
     PORT=3000
     DATABASE=mongodb://localhost/twitter_clone1
